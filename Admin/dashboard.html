@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor's Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar {
+      float: left;
+      width: 250px;
+    }
+    .main-content {
+      margin-left: 270px;
+    }
+    .widget {
+      background-color: #fceeee;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .widget h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .widget ul {
+      list-style: none;
+      padding: 0;
+    }
+    .widget li {
+      padding: 5px 0;
+    }
+    .widget li a {
+      color: #666;
+      text-decoration: none;
+    }
+    .widget li a:hover {
+      color: #000;
+    }
+    .patients-list {
+      overflow-y: auto;
+      max-height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h2>Doctor's Dashboard</h2>
+  </div>
+  <div class="container">
+    <div class="header">
+      <h1>Welcome, Dr. Riphat</h1>
+    </div>
+    <div class="sidebar">
+      <div class="widget">
+        <h2>Navigation</h2>
+        <ul>
+          <li><a href="check_appointment.html">Appointments</a></li>
+          <li><a href="">Patients</a></li>
+          <li><a href="medical_record.html">Prescriptions</a></li>
+          <li><a href="#">Reports</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="widget">
+        <h2>Today's Appointments</h2>
+        <ul class="patients-list">
+          <li>John Doe - 09:00 AM</li>
+          <li>Jane Smith - 10:30 AM</li>
+          <li>Michael Johnson - 11:45 AM</li>
+        </ul>
+      </div>
+      <div class="widget">
+        <h2>Recent Patients</h2>
+        <ul>
+          <li>Adam Johnson</li>
+          <li>Sarah Brown</li>
+          <li>Emily Davis</li>
+          <li>Matthew Wilson</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

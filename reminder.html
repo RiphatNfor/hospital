@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointment Reminder</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }
+  .success-message {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Appointment Reminder</h2>
+  <form id="reminderForm">
+    <div class="form-group">
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="appointmentDate">Appointment Date:</label>
+      <input type="date" id="appointmentDate" name="appointmentDate" required>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="button">Set Reminder</button>
+    </div>
+  </form>
+  <div id="successMessage" class="success-message" style="display: none;">Reminder set successfully!</div>
+</div>
+
+<script>
+  document.getElementById("reminderForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var email = document.getElementById("email").value;
+    var appointmentDate = document.getElementById("appointmentDate").value;
+
+    // Simulate sending reminder to the server (replace this with actual code to send reminder to the server)
+    setTimeout(function() {
+      document.getElementById("successMessage").style.display = "block";
+      document.getElementById("reminderForm").reset();
+      setTimeout(function() {
+        document.getElementById("successMessage").style.display = "none";
+      }, 3000); // Hide success message after 3 seconds
+    }, 1000); // Simulate server response time
+  });
+</script>
+
+</body>
+</html>

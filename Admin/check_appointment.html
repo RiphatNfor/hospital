@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Appointment Management</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    overflow: hidden;
+    background-color: #333333;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #666;
+}
+a{
+  font-size: large;
+}
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+ 
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 12px;
+    margin-right: 5px;
+  }
+  .button.cancel {
+    background-color: red;
+    color: white;
+  }
+  .button.approve {
+    background-color: #007bff;
+    color: white;
+  }
+  .active{
+    background-color: #554f4f;
+  }
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="dashboard.html">Home</a>
+    <a href="#" class="active">Appointment status</a>
+    <a href="medical_record.html">Medical record</a>
+    <a href="#">Appointment history</a>
+ 
+</div>
+
+<!-- <div class="header">
+  <h2>Doctor Appointment Management</h2>
+</div> -->
+
+
+<div class="container">
+  <h1>Appointments</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date of Birth</th>
+        <th>Reason</th>
+        <th>Doctor</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="appointmentTableBody">
+      <!-- Appointments will be dynamically added here -->
+    </tbody>
+  </table>
+</div>
+<script src="main.js"></script>
+
+</body>
+</html>
